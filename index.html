@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#58cc02">
+  <meta name="description" content="A friendly Japanese reading and writing course for beginners.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Japanese Quest</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Japanese Quest home">
+      <span class="brand-mark">あ</span><span id="brand-name">Japanese Quest</span>
+    </a>
+    <div class="top-stats">
+      <span title="Experience points">⭐ <b id="xp">0</b> XP</span>
+      <span title="Daily streak">🔥 <b id="streak">0</b></span>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <nav class="sidebar" aria-label="Main navigation">
+      <button class="nav-item active" data-page="home"><span>🏠</span> Learn</button>
+      <button class="nav-item" data-page="kana"><span>あ</span> Hiragana</button>
+      <button class="nav-item" data-page="review"><span>🧠</span> Review</button>
+      <button class="nav-item" data-page="progress"><span>📊</span> Progress</button>
+      <div class="sidebar-note"><strong>Small steps.</strong><br>Big progress.</div>
+    </nav>
+
+    <section class="content" id="main-content" tabindex="-1">
+      <div class="welcome-row">
+        <div>
+          <p class="eyebrow">YOUR JAPANESE ADVENTURE</p>
+          <h1 id="page-title">Ready for your next lesson?</h1>
+          <p class="muted" id="page-subtitle">Start with sounds, romaji and hiragana. No rush.</p>
+        </div>
+        <div class="mascot" aria-hidden="true">🦊</div>
+      </div>
+      <div id="page-content"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Made for your learning journey 🇯🇵</span>
+    <button class="text-button" id="settings-button">Settings</button>
+  </footer>
+
+  <dialog id="settings-dialog">
+    <form method="dialog" class="dialog-card">
+      <button class="dialog-close" aria-label="Close settings">✕</button>
+      <p class="eyebrow">MAKE IT YOURS</p>
+      <h2>Settings</h2>
+      <label for="course-name">Website name</label>
+      <input id="course-name" maxlength="32" value="Japanese Quest">
+      <p class="muted small">Your progress is saved in this browser on this device. Clearing site data can erase it.</p>
+      <div class="dialog-actions">
+        <button class="secondary-button" id="reset-progress" type="button">Reset progress</button>
+        <button class="primary-button" value="save" id="save-settings">Save name</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

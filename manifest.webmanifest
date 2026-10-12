@@ -1,0 +1,11 @@
+{
+  "name": "Japanese Quest",
+  "short_name": "Japanese Quest",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f9fa",
+  "theme_color": "#58cc02",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
