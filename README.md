@@ -1,19 +1,32 @@
-# Japanese Quest 🇯🇵
+# Japanese Quest v2.1.0
 
-A mobile-friendly Japanese reading and writing starter app built with plain HTML, CSS and JavaScript.
+Mobile-friendly Japanese beginner learning website. Static HTML, CSS and JavaScript; suitable for GitHub Pages.
 
 ## Files
-All files are in the repository root (flat layout), including the SVG icon.
+Upload all files in this folder directly to the repository root:
+- `index.html`
+- `styles.css`
+- `app.js`
+- `manifest.webmanifest`
+- `icon.svg`
+- `README.md`
 
-## GitHub Pages
-1. Create a GitHub repository.
-2. Upload every file in this folder directly to the repository root.
-3. Open **Settings → Pages**.
-4. Choose **Deploy from a branch**, select `main` and `/(root)`, then save.
-5. After deployment, open the generated `https://USERNAME.github.io/REPOSITORY/` URL.
+## V2 features
+- Visible app version (`v2.1.0`)
+- Individual sound lessons
+- Hiragana table grouped by rows, with later rows locked until the current row is mastered
+- 90% mastery threshold and one-time 20 XP reward per sound
+- Canvas handwriting question drawn directly on the website
+- Handwriting assessment is self-confirmed after revealing the reference. It is entirely local and does not use AI, an API, or upload drawings.
+- Unique completed-lesson count, XP, streak, mastery and progress stored in localStorage
+- Mobile-friendly layout and GitHub Pages compatibility
 
-## Progress storage
-Progress is stored in localStorage for the current browser/device. It does not sync between devices.
+## Publish
+Upload the six files to the root of your GitHub repository. In Settings → Pages, choose Deploy from a branch, then select `main` and `/(root)`.
 
-## Curriculum
-The beginner content is intentionally limited to sounds, romaji and hiragana. Other Japanese writing systems are not introduced.
+## Important note about handwriting
+The browser canvas captures finger or mouse strokes. It does not automatically recognise Japanese characters in this version. To avoid needing an AI service or unfairly rejecting handwriting, the learner reveals the target character and confirms whether their drawing matches it. The drawing never leaves the device.
+
+## V2.1.0 update
+- Progression is now by vowel columns: a → i → u → e → o. Complete all unlocked sounds in one column before the next column opens.
+- Handwriting remains self-assessed: reveal the target, compare your drawing, and confirm honestly. No AI or network recognition is used.
